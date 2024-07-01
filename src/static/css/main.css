@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'AccentFont';
+    src: url('../../assets/fonts/sf-mono-regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root {
+    --background: #0A192F;
+    --green-accent: #64FFDA;
+    --heading-text: #CCD6F6;
+    --content-text: #8892B0;
+    --line-colour: #233554;
+    --content-font: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', system-ui, sans-serif;
+    --accent-font: 'AccentFont';
+    --side-bar-colour: #112240;
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+body {
+    font-family: var(--content-font);
+    background-color: var(--background);
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 clamp(25px, 10vw, 250px);
+}
+
+section:not(#intro) {
+    margin-bottom: 60px;
+}
+
+.info-paragraph {
+    color: var(--content-text);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+section a {
+    color: var(--green-accent);
+    text-decoration: none;
+}
+
+.lighter-text {
+    color: var(--heading-text);
+}
+
+.darker-text {
+    color: var(--content-text);
+    line-height: 1.6;
+}
