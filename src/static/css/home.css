@@ -126,6 +126,7 @@ header {
     background-color: rgb(10,25,47, 0.85);
     width: 100vw;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     height: 71px;
     box-sizing: border-box;
     z-index: 9;
