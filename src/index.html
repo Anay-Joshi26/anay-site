@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anay Joshi | Portfolio Website</title>
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/home.css">
+    <script src = './static/js/home.js'></script>
+</head>
+<body>
+
+    <header>
+        <nav class = 'main-navbar'>
+            <ul>
+                <li><a class = 'lighter-text' href="#about-me">About Me</a></li>
+                <li><a class = 'lighter-text' href="#projects">Projects</a></li>
+                <li><a class = 'lighter-text' href="#education">Education</a></li>
+                <li><a class = 'lighter-text' href="#contact-me">Contact Me</a></li>
+                <a class = 'button' id = 'resume-anchor' href="./docs/resume.docx" target="_blank" rel="noopener noreferrer">Resume</a>
+            </ul>
+        </nav>
+        <div id = 'svg-container'>
+            <svg id = 'side-bar-collapse-button' width = 49px height = 49px viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#64FFDA" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#64FFDA" stroke-width="1.135" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+
+        <aside>
+            <nav class = 'aside-navbar lighter-text'>
+                <ul>
+                    <li><a class = 'lighter-text' href="#about">About</a></li>
+                    <li><a class = 'lighter-text' href="#projects">Projects</a></li>
+                    <li><a class = 'lighter-text' href="#education">Education</a></li>
+                    <li><a class = 'lighter-text' href="#contact-me">Contact</a></li>
+                </ul>
+                <a href="./docs/resume.docx" class="button" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+            
+        </aside>
+    </header>
+
+
+
+    <script>
+        // Add a blinking cursor at the end of the paragraph
+        document.addEventListener("DOMContentLoaded", function() {
+            var nameIntro = document.getElementById('name-intro');
+            var cursor = document.createElement('span');
+            cursor.className = 'cursor';
+            nameIntro.appendChild(cursor);
+        });
+
+    </script>
+
+    <main>
+        <section id="intro">
+            <p id = 'name-intro' >Hey, my name is</p>
+            <h2 class = 'big-heading lighter-text'>Anay Joshi</h2>
+            <h3 class='big-heading content darker-text work-info'>Software Engineer | Data Scientist</h3>
+            <p class = 'darker-text short-personal-info info-paragraph'>I'm a student at the University of Western Australia (UWA) and I'm studying <strong>Computer Science and Data Science</strong>. 
+               I have a deep passion for problem solving and I love to work on cool <a href="#projects">projects</a> revolving around software and data</p>
+               <a class = 'button' href="./docs/resume.docx" target="_blank" rel="noopener noreferrer">Download my resume!</a>
+        </section>
+
+        <section id = 'about-me'>
+            <h2 class = 'section-subheading'>About Me</h2>
+            <div class = 'section-content-flex'>
+                <p class = 'info-paragraph'>
+                    Hey! I'm Anay Joshi, a student at the University of Western Australia (UWA) studying Computer Science and Data Science. I love working on projects useful
+                    projects which people can use on a day-to-day basis. I deeply enjoy working with software and data to generate insights and solve problems. 
+                    I've worked on projects such as <a href="#axlebot">Discord Bots</a> and <a href="#perthpinpoint">Game web apps</a>. 
+                    <br><br>I am currently working on several projects, some involving <strong>AI</strong> and neural networks to recommend games to users based users Steam games (among others!)
+                </p>
+                <div>
+                    <img src="./assets/images/temp.jpg" alt="person img">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="projects">
+            <h2 class = 'section-subheading'>Projects</h2>
+            <div class = 'project-showcase'>
+                <h3 id = 'axlebot'><a href="https://github.com/Anay-Joshi26/axlebot-discord-bot">AxleBot</a></h3>
+                <div class = 'section-content-flex'>
+                    <p class = 'info-paragraph'>
+                        AxleBot is a <a href="https://discord.com/">Discord</a> bot that I created for me and my friends. It is a <strong>music bot</strong> which allows members in a voice
+                        call to listen to music together. It has a wide range of commands such as play, pause, skip, queue, and more. It also has a <strong>queue system</strong> which allows
+                        music to be queued up by multiple users. It connects with <strong>Spotify and YouTube APIs</strong> to play a user's specific song or playlist.
+                        <br><br>
+                        The bot was made with Python using the extensive <a href="https://discordpy.readthedocs.io/en/stable/" target="_blank">Discord.py</a> library. 
+                        It uses FFMPEG to stream music through discord all while being asynchronous!
+                    </p>
+                    <div>
+                        <img src="./assets/images/axlebot.png" alt="person img">
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'project-showcase'>
+                <h3 id = 'perthpinpoint' class = 'flip'><a href="https://github.com/codersforcauses/beginner-2023summer-g4">PerthPinpoint</a></h3>
+                <div class = 'section-content-flex project-showcase-flip order-flip'>
+                    <div>
+                        <img src="./assets/images/temp.jpg" alt="person img">
+                    </div>
+                    <p class = 'info-paragraph'>
+                        PerthPinpoint is a game which tests your knoweldge about how well you know the city of Perth. Players who are familiar with the city and are able to 
+                        decipher clues about their surroundings will be able to score higher points. 
+                        PerthPinpoint is based off the popular <a href="https://www.geoguessr.com/">GeoGuessr</a> game - but of course with a local twist.
+                        <br><br>
+                        The premise is that you are dropped in a random location within Perth. 
+                        You are free to explore the location as much as you wish using the Google Street View embed in the game. 
+                        Your goal is to guess the original location/street/landmark before the timer runs out!
+                        <br><br>
+                        Play the game <a target = _blank href="https://perthpinpoint.city/">here</a> and see how well you know Perth!
+                    </p>
+                </div>
+            </div>
+
+            <div class = 'project-showcase'>
+                <h3 id = 'axlebot'><a href="https://github.com/Anay-Joshi26/ABS-marital-status-analysis">Australian Census Data Analysis</a></h3>
+                <div class = 'section-content-flex'>
+                    <p class = 'info-paragraph'>
+                        The analysis aimed to investigate the changes in marital status patterns across different age and sex groups in Australia from 1996 to 2021 through ABS Census data.
+                        A scientific report was made with how the data was obtained, assumptions, cleaned and analysed. 
+                        The project gave significant insight into data cleaning and wrangling, working with raw CSV files (from ABS) and how to conduct a robust data analysis procedure.
+                        The data analysis was conducted using Python. Employing imports such as CSV, Matplotlib and Numpy. 
+                        The findings were aided visually with plots and graphs using Python's Matplotlib (pyplot) package.
+                    </p>
+                    <div>
+                        <img src="./assets/images/temp.jpg" alt="person img">
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'project-showcase'>
+                <h3 id = 'perthpinpoint' class = 'flip'><a href="https://github.com/codersforcauses/beginner-2023summer-g4">File and directory synchroniser</a></h3>
+                <div class = 'section-content-flex project-showcase-flip order-flip'>
+                    <div>
+                        <img src="./assets/images/temp.jpg" alt="person img">
+                    </div>
+                    <div style = 'display: block;'class = 'info-paragraph'>
+                        Ever needed to sync files across multiple locations like network drives or USBs? I created a command-line utility to keep your directories in perfect harmony. 
+                        This tool, built using C11 and POSIX function calls, ensures efficient and reliable synchronization. With Make handling the compilation and execution, it's a breeze to get up and running.
+                        <br>
+                        Key features include:
+                        <br>
+                        <ul>
+                            <li>Globbing: Similar to REGEX, this lets you selectively sync files based on patterns (e.g., only .txt files)</li>
+                            <li>Recursive Directory Processing: Sync entire directory trees effortlessly</li>
+                            <li>Preservation of File Attributes: Keeps modification times and permissions intact</li>
+                        </ul>   
+                        Say goodbye to mismatched files and hello to seamless synchronization!
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'project-showcase'>
+                <h4><a href="./docs/resume.docx" target = _blank>See more projects on the resume.</a></h4>
+            </div>
+
+
+
+
+
+            
+        </section>
+
+        <section id="education">
+            <h2 class = 'section-subheading'>My Education</h2>
+            <div>
+                <h3 class = 'lighter-text'>University of Western Australia</h3>
+                <p class = 'info-paragraph'>
+                    I am currently studying a Bachelor of Advanced Computer Science (Honours) - Majoring in Computing and Data Science at the University of Western Australia. 
+                    <br>
+                    I have studied the following courses: Data Structures & Algorithms, Statistical Analysis and Model Regression, Object-Oriented Programming (OOP), Systems Programming, Agile Web Development, Data Science and Data Engineering, Database Warehousing, Computer Networks
+                    <br><br>
+                    Current GPA: 6.94/7
+                    <br>
+                    Current WAM: 87.38
+                    <br><br>
+                    I have also been involved in clubs at UWA such as <a href="https://codersforcauses.org/">Coders for Causes</a>.
+                    
+                </p>
+            </div>
+            
+        </section>
+
+        <section id="contact-me">
+            <h2 class = 'section-subheading'>Contact Me</h2>
+            <div>
+
+                <p class = 'info-paragraph contact'>
+                    If you have any questions or would like to get in touch, feel free to contact me
+                </p>
+                
+                <div>
+                    <a class = 'button' href="mailto:abjoshi26122+website.inquiry@gmail.com" target="_blank" rel="noopener noreferrer">Contact me</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    
+    
+</body>
+</html>
